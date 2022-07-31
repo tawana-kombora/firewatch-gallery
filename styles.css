@@ -1,16 +1,17 @@
 /* 
     {pixel value divided by 16 (default broswer font-size) == equivalent rem/em unit
-
-    fonts:
-    20px - 1.25rem
-    30px - 1.9rem
-
-    colors:
-    #0044ff - blue
-    #004e92 - light blue
-    #000428 - dark blue
 */
+
 :root {
+    /* font-size */
+    --15px: 0.9rem;
+    --16px: 1rem;
+    --19px: 1.2rem;
+    --20px: 1.25rem;
+    --25px: 1.6rem;
+    --30px: 1.9rem;
+
+    /* color */
     --blue: #0044ff;
     --light-blue: #004e92;
     --dark-blue: #000428;
@@ -24,9 +25,12 @@
 
 body {
     font-family: "lato", sans-serif;
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
-
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
 /* 
     NAVBAR
 */
@@ -38,14 +42,12 @@ body {
 
 /* displays the items in the elements(s) with the flex class inside the navbar side by side */
 .navbar .flex {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-
+    align-items: center;
     height: 100%;
 }
 .navbar h1 {
-    font-size: 1.9rem;
+    font-size: var(--30px);
     font-weight: 300;
     line-height: 1.2;
     margin: 10px 0;
@@ -75,36 +77,29 @@ body {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: var(--30px);
     font-weight: 600;
     margin: 10px 0;
     line-height: 1.2;
 }
 h2 {
-    font-size: 25px;
+    font-size: var(--25px);
     font-weight: 300;
     margin: 10px 0;
     line-height: 1.2;
 }
-
-/* Make all link text black with no text decoration */
 a {
-    color: black;
+    color: rgb(0, 0, 0);
     text-decoration: none;
 } 
-
-/* All images must not be larger than parent container */
 img {
     width: 100%;
 }
-
-/* No styling on list items */
 li {
     list-style-type: none;
 }
- 
 p {
-    font-size: 1.25rem;
+    font-size: var(--20px);
     margin: 10px 0;
 }
 
@@ -140,7 +135,7 @@ p {
 }
 .showcase input[type="email"] {
     padding: 10px 70px 10px 0;
-    font-size: 0.9rem;
+    font-size: var(--15px);
     border: none;
     border-radius: 6px;
     padding-left: 6px;
@@ -148,7 +143,7 @@ p {
 .btn {
     border-radius: 6px;
     border: none;
-    font-size: 1rem;
+    font-size: var(--16px);
 
     margin-left: 10px;
     padding: 12px 20px;
@@ -160,6 +155,48 @@ p {
     cursor: pointer;
 }
 .little-info {
-    font-size: 0.9rem;
+    font-size: var(--15px);
     font-family: "poppins" ,sans-serif;
 }
+
+/* Stats Section */
+
+/* Centers the container, sets a maximum width */
+.lower-container {
+  margin: 120px auto;
+  padding: 0;
+  max-width: 1400px;
+}
+.info-cards {
+    padding: 35px 50px;
+    text-align: center;
+}
+.info-cards .fa {
+    color: var(--blue);
+}
+.info-card {
+    width: 800px;
+    margin: 0 30px;
+    text-align: center;
+    /* outline: 3px solid purple; */
+}
+.title {
+    color: rgb(0, 0, 0);
+    font-size: var(--20px);
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    /* outline: 3px solid blue; */
+}
+.text {
+    font-size: var(--19px);
+    color: rgb(0, 0, 0);
+
+    width: 100%;
+    padding: 10px;
+    text-align: justify;
+    /* outline: 3px solid green; */
+}
+
+/* Testimonials */
+
