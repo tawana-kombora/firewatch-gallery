@@ -12,14 +12,53 @@
 <body>
     <section class="navbar">
         <nav class="container flex">
-            <h1 class="logo">Skilllz</h1>
+            <h1 id="top" class="logo">Firewatch</h1>
             <div>
                 <ul>
-                    <li class="nav"><a href="#" class="outline">Log In</a></li>
-                    <li class="nav"><a href="#" class="outline">Check Courses</a></li>
+                    <li class="nav">
+                        <a href="#" class="outline">Log In</a>
+                    </li>
+                    <li class="nav">
+                        <a href="#" class="outline">Gallery</a>
+                    </li>
                 </ul>
             </div>
         </nav>
+    </section>
+
+    <!-- 
+        How to Build the Showcase Area:
+        
+        The showcase area is going to house the headline text, supporting text, a form for signing up new users, as well as a headline image.
+        
+        This section is going to be divided in two: the left side and the right side. In other words, it will be displayed as a grid of two units 
+    -->
+
+    <section class="showcase">
+        <div class="container">
+            <div class="grid">
+
+                <div class="grid-item-1">
+                    <div class="showcase-text">
+                        <h1>The Wyoming Wilderness depicted in Firewatch</h1>
+                        <p class="supporting-text">Imagine retreating from your messy life to work as a fire lookout in the Wyoming Wilderness</p>
+                    </div>
+                    <div class="showcase-form">
+                        <form action="">
+                            <input type="email" placeholder="Enter you email address">
+                            <input type="submit" class="btn" value="Get Photos">
+                        </form>
+                        <p class="little-info">Receive weekly photographs depicting wilderness scenary.</p>
+                    </div>
+                </div>
+
+                <div class="grid-item-2">
+                    <div class="image">
+                        <img src="images/firewatch-road-ox.jpg" alt="firewatch ox road">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 </html>

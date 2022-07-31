@@ -4,8 +4,17 @@
     fonts:
     20px - 1.25rem
     30px - 1.9rem
-*/
 
+    colors:
+    #0044ff - blue
+    #004e92 - light blue
+    #000428 - dark blue
+*/
+:root {
+    --blue: #0044ff;
+    --light-blue: #004e92;
+    --dark-blue: #000428;
+}
 /* Override default style and set padding and margin to nothing */
 * {
     box-sizing: border-box;
@@ -18,8 +27,11 @@ body {
     color: #fff;
 }
 
+/* 
+    NAVBAR
+*/
 .navbar {
-    background-color: purple;
+    background: linear-gradient(to left, #000428 0%, #004e92 100%);
     height: 70px;
     padding: 0 30px;
 }
@@ -35,22 +47,25 @@ body {
 .navbar h1 {
     font-size: 1.9rem;
     font-weight: 300;
-    margin: 10px 0;
     line-height: 1.2;
+    margin: 10px 0;
+
+    border-bottom: 3px solid #aaa;
 }
+
 .navbar ul {
     display: flex;
 }
 
 /* Changes the color of both links to white, adds padding between them and margin as well */
 .navbar a {
-    color: white;
+    color: inherit;
     padding: 9px;
     margin: 0 10px;
 }
 .navbar a:hover {
-    color: #9867c5;
-    border-bottom: 3px solid #9867C5;
+    color: var(--blue);
+    border-bottom: 3px solid var(--blue);
 }
 /* Centers it, sets a maximum width and makes sure elements can flow past it*/
 .container {
@@ -87,11 +102,64 @@ img {
 li {
     list-style-type: none;
 }
-
-p {
-    font-size: 1.9rem;
-}   
+ 
 p {
     font-size: 1.25rem;
     margin: 10px 0;
+}
+
+/* 
+    SHOWCASE: grid
+*/
+.grid {
+    overflow: visible;
+
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+.grid-item-1, 
+.grid-item-2 {
+    position: relative;
+    top: 50px;
+    /* outline: 3px solid green; */
+}
+.showcase {
+    height: 300px;
+    background: linear-gradient(195deg, #000428 0%, #004e92 100%);
+}
+.showcase p {
+    margin-bottom: 30px;
+}
+.showcase img {
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.2);
+}
+
+/* showcase form styles */
+.showcase-form {
+    padding-left: 7px;
+}
+.showcase input[type="email"] {
+    padding: 10px 70px 10px 0;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 6px;
+    padding-left: 6px;
+}
+.btn {
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+
+    margin-left: 10px;
+    padding: 12px 20px;
+
+    color: inherit;
+    background-color: var(--blue);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+
+    cursor: pointer;
+}
+.little-info {
+    font-size: 0.9rem;
+    font-family: "poppins" ,sans-serif;
 }
