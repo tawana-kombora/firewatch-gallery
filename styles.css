@@ -215,6 +215,7 @@ p {
 .grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    align-items: center;
     gap: 40px;
 }
 
@@ -236,4 +237,24 @@ p {
     -webkit-border-radius: 50%;
 
     margin: 5px auto;
+}
+
+/* Add padding around the footer as well */
+
+footer {
+    /* background-color: #131313; */
+    padding: 20px 10px;
+    color: black;
+}
+footer .container {
+    width: 1000px;
+}
+footer a {
+    /* color: white; */
+    margin: 0 10px;
+}
+
+footer .flex-1 {
+    display: flex;
+    justify-content: flex-end;
 }
